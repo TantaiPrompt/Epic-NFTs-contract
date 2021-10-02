@@ -14,6 +14,9 @@ const main = async () => {
   // Wait for it to be mined.
   await txn.wait()
 
+  const totalToken =  await nftContract.getCurrentToken();
+  console.log("Total Token: ",totalToken.toNumber());
+
 };
 
 const runMain = async () => {
